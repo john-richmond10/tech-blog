@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Tech People Blog</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>The Tech People Blog</h1>
+            <nav>
+                <ul>
+                    {{#if loggedIn}}
+                    <li><a href="/views/layouts/dashboard.handlebars">Dashboard</a></li>
+                    <li><button id="logout" class="btns">Logout</button></li>
+
+                    {{else}}
+                    <li><a href="/views/layouts/login.handlebars">Login</a></li>
+                    <li><a href="/views/layouts/signup.handlebars">Signup</a></li>
+                    {{/if}}
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            {{{body}}} <!-- This is where the content will be injected -->
+        </main>
+
+        <footer>
+            <p>© 2021 The Tech People Blog</p>
+    </div>
+</body>
+{{#if loggedIn}}
+<script src="/public/js/logout.js"></script>
+{{/if}}
+</html>

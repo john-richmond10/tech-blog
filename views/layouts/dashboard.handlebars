@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Tech People Blog</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Your Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><button id="logout" class="btns">Logout</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Create New Post</h2>
+                <form class="new-post">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" placeholder="Title">
+                    <label for="post-content">Content</label>
+                    <input id="post-content" name="post-content" type="text" placeholder="Content" maxlength="1000">
+                    <button type="submit" class="btns">Create Post</button>
+                </form>
+            </section>
+
+            {{#if posts.length}}
+            <section>
+                <h2>Your Posts</h2>
+                <ul class="posts">
+                    {{#each posts as |post|}}
+                    <li>
+                        {{> post-info post}}
+                        <a href="/dashboard/edit/{{post.id}}">Edit</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </section>
+            {{/if}}
+        </main>
+
+        <footer>
+            <p>© 2021 The Tech People Blog</p>
+    </div>
+</html>
+
+<script src="/public/js/logout.js"></script>
+<script src="/public/js/new-post.js"></script>

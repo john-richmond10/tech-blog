@@ -1,0 +1,8 @@
+<ul class="all-posts">
+    {{#each posts as |post|}}
+    <li>
+        {{> post-info post}}
+        <a href="/dashboard/edit/{{post.id}}">Edit</a>
+    </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,9 @@
+<section class="post">
+    <div class="title">
+        <a href="/post/{{id}}"><h2>{{title}}</h2></a>
+        <p>{{post_body}}</p>
+    </div>
+    <div class="post-info">
+        <p>Posted by {{user.username}} on {{format_date created_at}}</p>
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+</section>
