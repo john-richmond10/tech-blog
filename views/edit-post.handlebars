@@ -22,8 +22,8 @@
             </div>
         </form>
 
-        {{#if loggedIn}}
-        {{comments post.comments}}
+        {{#if loggedIn}} 
+        {{> comments post.comments}} 
         {{/if}}
     </section>
 </div>
@@ -31,4 +31,3 @@
 <script src="/public/js/edit-post.js"></script>
 <script src="/piblic/js/comment.js"></script>
 
-{{! Path: controllers\api\comment-routes.js }}

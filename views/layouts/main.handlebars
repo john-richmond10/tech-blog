@@ -14,13 +14,13 @@
             <h1>The Tech People Blog</h1>
             <nav>
                 <ul>
-                    {{#if loggedIn}}
-                    <li><a href="/views/layouts/dashboard.handlebars">Dashboard</a></li>
+                    {{#if loggedIn}} {{!-- If the user is logged in --}}
+                    <li><a href="/dashboard">Dashboard</a></li>
                     <li><button id="logout" class="btns">Logout</button></li>
 
-                    {{else}}
-                    <li><a href="/views/layouts/login.handlebars">Login</a></li>
-                    <li><a href="/views/layouts/signup.handlebars">Signup</a></li>
+                    {{else}} {{!-- If the user is not logged in --}}
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup">Signup</a></li>
                     {{/if}}
                 </ul>
             </nav>
