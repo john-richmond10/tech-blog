@@ -1,9 +1,9 @@
 const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../config/config');
 
-class Comment extends Modle {}
+class Comment extends Model {}
 
-customElements.init (
+Comment.init(
     {
         id: {
             type: DataTypes.INTEGER,
