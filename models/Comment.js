@@ -34,11 +34,13 @@ Comment.init(
                 len: [1],
             },
         },
+    },
+    {
         sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: 'Comment',
-    }
+    }    
 );
 
 module.exports = Comment;
